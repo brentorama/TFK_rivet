@@ -9,12 +9,13 @@ def bRivet():
         edgeMax = cmd.polyEvaluate(ob, e=True)
         shape = cmds.listRelatives(ob, shapes=True)
         count = len(input)
-        cmds.undoInfo( state=False )  
+		#replace this with "UNDOCHUNK"
+        cmds.undoInfo( ock=True )  
         try:
             bRivet_Build(input,ob,edgeMax,shape, count)
         except:
             cmd.warning('Something is not right')
-        cmds.undoInfo( state=True ) 
+        cmds.undoInfo( cck=True ) 
     else:
         cmd.warning('bRivet requires at least 2 edges to be selected')
 
